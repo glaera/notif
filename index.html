@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Set the viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Set character encoding -->
+  <meta charset="utf-8">
+  <!-- Include manifest -->
+  <link rel="manifest" href="manifest.json">
+  <!-- Set title -->
+  <title>Impact Notifications</title>
+  <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+</head>
+
+<body>
+
+  <h1>Impact Notifications </h1>
+  <p>This page must be accessed using HTTPS or via localhost and it works only in earlier Chrome and Firefox (not within iOS).</p>
+    <a href="/login">login</a>
+    <br/>
+  <button disabled class="js-push-btn">Subscribe to receive Impact notifications</button><br><br>
+  
+  <section class="js-sub-endpoint" style="display:none;width:80%">
+    <h3>Subscription Object(basically kind of the user's subscription id):</h3>
+    <code class="js-subscription-json"></code><br><br><br>
+    <h3>Endpoint URL:</h3>
+    <code class="js-endpoint-url"></code>
+  </section>
+  <form  action="/api/broadcast" method="POST">
+    <div class="mdl-textfield mdl-js-textfield is-upgraded" data-upgraded=",MaterialTextfield">
+        <textarea class="mdl-textfield__input" type="text" rows="3" id="push-data" name="message"></textarea>
+        <label class="mdl-textfield__label" for="push-data">Add Push Text Here....</label>
+      </div>
+    <section class="js-sub-list" style="width:80%">
+           
+    </section>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple">
+        Send Push Message
+      <span class="mdl-button__ripple-container">
+        <span class="mdl-ripple is-animating" style="width: 382.499px; height: 382.499px; transform: translate(-50%, -50%) translate(135px, 15px);">
+        </span>
+      </span>
+    </button>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple">
+        Delete Subscribers
+      <span class="mdl-button__ripple-container">
+        <span class="mdl-ripple is-animating" style="width: 382.499px; height: 382.499px; transform: translate(-50%, -50%) translate(135px, 15px);">
+        </span>
+      </span>
+    </button>
+  </form> 
+  <!-- Include script -->
+  <script src="js/main.js"></script>
+  <script src="js/registeruser.js"></script>
+
+</body>
+</html>
