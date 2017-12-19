@@ -27,10 +27,10 @@ var subscribeHandler = function(req,res){
 
       getModel().create(pushSubscription, (err, entity) => {
         if (err) {
-          console.log('gennaro storing subscription',err);
+          console.log(' storing subscription',err);
           return;
         }
-        console.log('gennaro entity stored',entity);
+        console.log(' entity stored',entity);
       });
 
       // TODO 4.3a - include VAPID keys
