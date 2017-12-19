@@ -51,7 +51,7 @@ app.use(passport.session());
 app.disable('etag');
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
-
+app.enable('trust proxy');
 app.use("/login", function (req, res) {
   var url = getAuthUrl();
   res.send(`
