@@ -20,15 +20,7 @@ var send = function(id,message){
 
     try {
       const pushSubscription = entity;
-/*
-      getModel().create(pushSubscription, (err, entity) => {
-        if (err) {
-          console.log('gennaro storing subscription',err);
-          return;
-        }
-        console.log('gennaro entity stored',entity);
-      });
-*/
+
       // TODO 4.3a - include VAPID keys
       
       var payload = message;
