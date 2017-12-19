@@ -43,7 +43,6 @@ const reducerjson = (accumulator, currentValue) => {
 
 function asHtml (data) {
  
-  console.log('gennaro type ',typeof data)
   return '<table>'
   +'<tr><th></th><th>internal id</th><th>push</th><th>delete</th><th>detail</th><th>IP address</th></tr>'
   +data.reduce(reducerjson,'')
