@@ -12,7 +12,6 @@ var deleteHandler = function(req,res){
     
   getModel().delete(req.params.internalId, (err, entity) => {
     if (err) {
-      console.log('gennaro failed to delete',err);
       return;
     }
     //res.json(entity);
