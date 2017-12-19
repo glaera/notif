@@ -30,7 +30,6 @@ function getOAuthClient () {
 }
 
 const reducerjson = (accumulator, currentValue) => {
-  console.log('gennaro element ',currentValue);
   return accumulator + `<tr>`+ 
   `<td><input type="checkbox" id="cID${currentValue.id}" name="subscriptionId" value="${currentValue.id}"></td>`+
   `<td>${currentValue.id}</td>`+
@@ -53,7 +52,6 @@ function asHtml (data) {
 
 
 var listHandler = function(req,res){
-    console.log('gennaro USER',req.user);
     var oauth2Client = getOAuthClient();
     oauth2Client.credentials = req.session["tokens"];
 /*
