@@ -31,7 +31,7 @@ const passport = require('passport');
 var plus = google.plus('v1');
 var OAuth2 = google.auth.OAuth2;
 const ClientId = "110555067693-cmpbcaljgnk6ifiiklpr02fgb1b5feso.apps.googleusercontent.com";
-const ClientSecret = "7bOBZBi67pmSwa9EYW6zqnHg";
+const ClientSecret = "NOSECRET";
 const RedirectionUrl = "http://localhost:8080/oauthCallback";
 
 
