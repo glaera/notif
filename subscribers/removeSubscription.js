@@ -13,7 +13,7 @@ var removeSubscription = function(id,message){
     
   getModel().delete(id, (err, entity) => {
     if (err) {
-      console.log('gennaro failed to delete',err);
+      console.log(' failed to delete',err);
     } 
   });
     
