@@ -12,7 +12,6 @@ var readHandler = function(req,res){
     
   getModel().read(req.params.internalId, (err, entity) => {
     if (err) {
-      console.log('gennaro failed to read',err);
       return;
     }
     res.json(entity);
