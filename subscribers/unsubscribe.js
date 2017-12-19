@@ -10,7 +10,6 @@ function getModel () {
 
 var unsubscribeHandler = function(req,res){
     let ipaddress = req.connection.remoteAddress;
-    console.log('GENNAROOOOO')
     getModel().deleteByIP(ipaddress, (err, entity) => {
       if (err) {
         console.log('gennaro failed to delete',err);
